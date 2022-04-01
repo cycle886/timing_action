@@ -34,11 +34,11 @@ jobs:
       #         git clone https://gitee.com/x-cmd/image.git              
               
       - name: docker login
-          run: echo ${{ secrets.GITHUB_TOKEN }}
-        # env:
-        #   DOCKER_USER: ${{ secrets.DOCKER_USER }}
-        #   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        # run: docker login -u edwinjhlee -p 35320daa-57ab-436b-ae42-1d59a513599e
+          # run: echo ${{ secrets.GITHUB_TOKEN }}
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: echo ${{ DOCKER_USER }}
 
       # - name: build image
       #   run: |
