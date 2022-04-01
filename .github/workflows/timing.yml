@@ -33,6 +33,7 @@ jobs:
               git config --global user.name 1096481521@qq.com
               git clone https://gitee.com/x-cmd/image.git
               cd image
+              docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
               docker buildx create --use
               sh .x-cmd/image alpine
 
