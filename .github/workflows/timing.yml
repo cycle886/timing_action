@@ -29,7 +29,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-              git clone git@gitee.com:x-cmd/image.git
+              git config --global user.email cycle886
+              git config --global user.name 1096481521@qq.com
+              git clone https://gitee.com/x-cmd/image.git
               ls
 
       # Runs a set of commands using the runners shell
