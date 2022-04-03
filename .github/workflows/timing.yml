@@ -4,9 +4,9 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # 每天早上5点(会有一定的误差)定时进行
+  # 每月23号晚上9点(会有一定的误差)定时进行
   schedule:
-    - cron: '0 21 * * *'
+    - cron: "0 0 13 23 * ?"
   # 可以手动进行
   workflow_dispatch:
 
